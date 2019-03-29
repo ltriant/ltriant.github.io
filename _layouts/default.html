@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{ site.title }}</title>
+		<link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}" />
+	</head>
+<body>
+
+<div id="content">
+{{ content }}
+</div>
+
+<div id="page-footer">
+	<a href="{{ "about.html" | relative_url }}">about me</a> -
+	<a href="https://twitter.com/ltriant">twitter</a> -
+	<a href="{{ "/feed.xml" | relative_url }}">rss</a>
+</div>
+
+</body>
+</html>
