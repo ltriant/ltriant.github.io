@@ -130,7 +130,7 @@ When it comes time to tweak the details of the cache to get more performance out
 
 The code above initialised the cache with a size of 10MB. If the cache exceeds 10MB, it will expire entries based on a LRU algorithm (as mentioned above in the docs).
 
-That might make sense for the kind of data being cached in this service— because MD5 checksums don’t change no matter how much time passes — but when a system is caching values that *can* change, e.g. values out of a database that represent an organic value, expiring cache items based on a unit of time makes sense.
+That might make sense for the kind of data being cached in this service - because MD5 checksums don’t change no matter how much time passes - but when a system is caching values that *can* change, e.g. values out of a database that represent an organic value, expiring cache items based on a unit of time makes sense.
 
 A simple way to do this for *all items* in the cache is at initialisation.
 

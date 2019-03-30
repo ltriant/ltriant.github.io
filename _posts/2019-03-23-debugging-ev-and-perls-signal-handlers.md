@@ -8,7 +8,7 @@ A little while ago, I ran into a weird problem with a small Perl system that I h
 
 The program is made up of a non-blocking parent process, which, among other functions, is mainly responsible for supervising several child processes, spawning replacement children should any exit unexpectedly.
 
-The parent process uses [AnyEvent](https://metacpan.org/pod/AnyEvent) for the non-blocking functionality, and the code specifically forces the use of the [EV](https://metacpan.org/pod/EV) backend event loop (which is a wrapper to the [libev](http://software.schmorp.de/pkg/libev.html) library), instead of letting AnyEvent auto-detect an event loop at runtime. This is done so that — across many codebases — the same event loop is always used.
+The parent process uses [AnyEvent](https://metacpan.org/pod/AnyEvent) for the non-blocking functionality, and the code specifically forces the use of the [EV](https://metacpan.org/pod/EV) backend event loop (which is a wrapper to the [libev](http://software.schmorp.de/pkg/libev.html) library), instead of letting AnyEvent auto-detect an event loop at runtime. This is done so that - across many codebases - the same event loop is always used.
 
 Also relevant to the story is that at startup, the parent process announces itself to a system which, for the purpose of this post, is like a service discovery system. To do this, it uses [Sys::Hostname](https://metacpan.org/pod/Sys::Hostname) to get the current host’s hostname.
 
@@ -129,9 +129,9 @@ This code was developed and due to be deployed onto a host, running Perl 5.8.9 o
 
 Part-way through development, this particular system was replatformed into a new provider, upgraded to CentOS 6, and also upgraded to Perl 5.20.1.
 
-So I redeployed everything onto a new development host based on the new production servers’ architecture… and the process management functionality completely stopped working; any time a child process exited unexpectedly, the parent never noticed and thus, a new child process was never forked to replace it.
+So I redeployed everything onto a new development host based on the new production servers’ architecture... and the process management functionality completely stopped working; any time a child process exited unexpectedly, the parent never noticed and thus, a new child process was never forked to replace it.
 
-The first thing I did — through a very tedious process—was ensure all of the CPAN dependencies (and there were many that the code above doesn’t use) were the same versions to the working version of the code; it wouldn’t have been the first time that a dependency version difference was the cause of a weird problem like this.
+The first thing I did - through a very tedious process - was ensure all of the CPAN dependencies (and there were many that the code above doesn’t use) were the same versions to the working version of the code; it wouldn’t have been the first time that a dependency version difference was the cause of a weird problem like this.
 
 But that didn’t fix anything.
 
@@ -315,7 +315,7 @@ eval {
 }
 ```
 
-Perl’s SIGCHLD handler is overwritten. But it has been declared local, so the *original* handler should be put back into $SIG{CHLD} after the block of code has finished. This code does the right thing.
+Perl’s SIGCHLD handler is overwritten. But it has been declared local, so the *original* handler should be put back into `$SIG{CHLD}` after the block of code has finished. This code does the right thing.
 
 However, because the original handler in this case is EV’s handler, which was declared in the libev world, the Perl interpreter is unable to replace the handler.
 
@@ -325,7 +325,7 @@ Finally, I understand the problem:
 
 1. libev (via EV) sets up a SIGCHLD handler at Perl’s compile-time
 
-1. Sys::Hostname::hostname() overwrites the SIGCHLD handler temporarily, but Perl is unable to reinstate libev’s SIGCHLD handler afterwards
+1. `Sys::Hostname::hostname()` overwrites the SIGCHLD handler temporarily, but Perl is unable to reinstate libev’s SIGCHLD handler afterwards
 
 1. This results in there being no SIGCHLD handler at all
 
@@ -372,7 +372,7 @@ If line 11 is commented out, then everything works just fine.
 
 Although it’s not documented in a place that’s super-easy to locate, the [perldoc for perlxs](https://perldoc.perl.org/perlxs.html#CAVEATS) hints at this being a problem:
 > XS code has full access to system calls including C library functions. It thus has the capability of interfering with things that the Perl core or other modules have set up, **such as signal handlers** or file handles. It could mess with the memory, or any number of harmful things. Don’t.
-> …
+
 > In general, the perl interpreter views itself as the center of the universe as far as the Perl program goes. XS code is viewed as a help-mate, to accomplish things that perl doesn’t do, or doesn’t do fast enough, but always subservient to perl. The closer XS code adheres to this model, the less likely conflicts will occur.
 
 ## Possible Solutions
@@ -477,17 +477,17 @@ sub child_main {
 
 How did an upgrade from Perl 5.8.9 on CentOS 5 to Perl 5.20.1 on CentOS 6 cause this problem anyway?
 
-Looking closer at the Sys::Hostname code, one of the first methods for determining the hostname is to call a ghname function, which Sys::Hostname defines in its XS code.
+Looking closer at the Sys::Hostname code, one of the first methods for determining the hostname is to call a `ghname` function, which Sys::Hostname defines in its XS code.
 
 ```perl
 # method 1' - try to ask the system
 $host = ghname() if defined &ghname;
 ```
 
-I thought it was funny that it only calls the ghname function *if* it’s defined. I presume this might be for machines where a compiler may not be available to build the XS module.
+I thought it was funny that it only calls the `ghname` function *if* it’s defined. I presume this might be for machines where a compiler may not be available to build the XS module.
 
 On the servers that were exhibiting the pathological behaviour, the compiled XS code (the .so file) was unable to be loaded, therefor this function was never called. Unfortunately, I was never able to figure out *why* the XS code couldn’t be loaded as I no longer have access to that system to further investigate.
 
-On the older servers that worked perfectly fine, the compiled XS code *was* loaded successfully, therefor the ghname function was called instead of falling back to the hostname command.
+On the older servers that worked perfectly fine, the compiled XS code *was* loaded successfully, therefor the `ghname` function was called instead of falling back to the hostname command.
 
 In the end, it was a little disappointing to not find out the rest of the story, but I was satisfied enough with what I’d discovered, as well as what I’d learned about some of the libraries that I heavily rely on for high-performance servers, and about signal handling in general.

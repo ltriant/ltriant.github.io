@@ -21,7 +21,7 @@ So if I had a piece of advice for budding NES emulator developers: use it as a g
 
 In almost any project, I’m a big advocate of building specialised tools to make a job easier.
 
-Initially, I had one immediate need: finding a way to compare my emulator’s disassembly output to the nestest log. I didn’t want to fumble around trying to get my output to match perfectly, so I wrote a quick little Perl script — which I named [nes-diff](https://github.com/ltriant/nes/blob/master/tools/nes-diff) — to find the first line that doesn’t match, output the diff, and then exit, because if one thing doesn’t match, any further output is likely to be different aswell.
+Initially, I had one immediate need: finding a way to compare my emulator’s disassembly output to the nestest log. I didn’t want to fumble around trying to get my output to match perfectly, so I wrote a quick little Perl script - which I named [nes-diff](https://github.com/ltriant/nes/blob/master/tools/nes-diff) - to find the first line that doesn’t match, output the diff, and then exit, because if one thing doesn’t match, any further output is likely to be different aswell.
 
     $ tools/nes-diff out.txt doc/nestest.log
     230 < C936 ADC A:01 X:00 Y:00 P:6D SP:FB CYC:295
@@ -61,7 +61,7 @@ If the parameter for an instruction needs to be retrieved from a 16-bit address 
 
 ## Onto the PPU
 
-The first source of documentation was — as it was for the CPU — the NesDev wiki: [PPU programmer reference](https://wiki.nesdev.com/w/index.php/PPU_programmer_reference). I have a printout of this that sits on my desk at the moment.
+The first source of documentation was - as it was for the CPU - the NesDev wiki: [PPU programmer reference](https://wiki.nesdev.com/w/index.php/PPU_programmer_reference). I have a printout of this that sits on my desk at the moment.
 
 My first thoughts as I was reading through the docs weren’t pretty. As someone who has pretty much never done any graphical programming (and I’m pretty sure adding a curses UI to an app doesn’t count), the PPU is full of ideas that are completely foreign to me.
 
