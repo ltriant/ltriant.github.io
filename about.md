@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Luke Triantafyllidis"
 ---
 Programmer from Melbourne, Australia
 
