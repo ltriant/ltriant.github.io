@@ -2,7 +2,7 @@
 layout: post
 title:  "NES Emulator, Part 2: I sort of know what I’m doing"
 date:   2018-06-29 00:00:00 +1100
-description: "Finishing the CPU implementation, diving into the PPU, and reflecting on choosing Rust"
+description: "Finishing the CPU, starting the PPU, and reflecting on choosing Rust"
 ---
 In my first post about my journey to the center of the NES, I was at the point where I was still working on the CPU; implementing new addressing modes and instructions as I made my way through the nestest ROM. Well, I finally finished the CPU, including a handful of the illegal opcodes. The last of the illegal opcodes just need some placeholders, because, as I understand it, very few games use them.
 
@@ -11,6 +11,7 @@ I also pushed the current state of [my code to GitHub](https://github.com/ltrian
 ## The Golden Log
 
 Previously, I mentioned an issue about checking my emulator’s output against the nestest golden log output:
+
 > The disassembly output that my emulator prints isn’t exactly the same as what the nestest log output is, and I’m not sure how worried I should be about that yet. Most posts that I find on the NesDev forums suggest that being *mostly* correct is good enough at the start, and to just use it as a guide. But it makes me feel all kinds of uncomfortable.
 
 After fixing up a ton of bugs, my output perfectly matches the nestest golden log.
@@ -57,7 +58,7 @@ There is a bug in the CPU that every NES emulator must recreate, and if you’re
 
 If the parameter for an instruction needs to be retrieved from a 16-bit address (which is determined by the addressing mode of the opcode), and the first byte of this 16-bit address is, for example, retrieved from memory at the address 0x10FF, then the second byte should, logically, come from 0x1100, because we’re reading 2 bytes from 0x10FF. But the bug is that the second byte actually comes from 0x1000 because the addition doesn’t carry over into the top byte of the memory address.
 
-[Michael Fogleman](undefined)’s [article](https://medium.com/@fogleman/i-made-an-nes-emulator-here-s-what-i-learned-about-the-original-nintendo-2e078c9b28fe) about his adventures in NES emulation touches on this bug. When I ran into this problem in my CPU, I was fortunate enough that I had this little nugget of information in the back of my mind, so it didn’t take long to discover and then introduce into my emulator.
+[Michael Fogleman’s article](https://medium.com/@fogleman/i-made-an-nes-emulator-here-s-what-i-learned-about-the-original-nintendo-2e078c9b28fe) about his adventures in NES emulation touches on this bug. When I ran into this problem in my CPU, I was fortunate enough that I had this little nugget of information in the back of my mind, so it didn’t take long to discover and then introduce into my emulator.
 
 ## Onto the PPU
 
@@ -85,7 +86,7 @@ The module system provides a sensible way to separate the CPU code from the PPU 
 
 But the biggest win has been the static type checks and the number of bugs that the compiler errors and warnings have prevented.
 
-Many instructions set the carry flag, and I was doing this by checking if a calculated value was greater than or equal to zero. However, because the type was *u8*, it was guaranteed to always be true, and thus the carry flag would always be set. But luckily, the Rust compiler is super helpful and hints to you that you’re probably doing something wrong:
+Many instructions set the carry flag, and I was doing this by checking if a calculated value was greater than or equal to zero. However, because the type was `u8`, it was guaranteed to always be true, and thus the carry flag would always be set. But luckily, the Rust compiler is super helpful and hints to you that you’re probably doing something wrong:
 
     warning: comparison is useless due to type limits
        --> src/cpu.rs:510:18
