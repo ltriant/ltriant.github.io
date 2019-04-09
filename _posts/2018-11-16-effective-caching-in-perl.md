@@ -270,7 +270,7 @@ And Redis does, in fact, have the value we see:
 <pre>
 $ redis-cli
 127.0.0.1:6379> <strong>get md5_as_a_service||foo</strong>
-"\xa9,\xee[\xff\xff\xff\xff\xff\xff\xff\xff\x00\x01**acbd18db4cc2f85cedef654fccc4a4d8**"
+"\xa9,\xee[\xff\xff\xff\xff\xff\xff\xff\xff\x00\x01<strong>acbd18db4cc2f85cedef654fccc4a4d8</strong>"
 </pre>
 
 A couple of things to note:
