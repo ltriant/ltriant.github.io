@@ -52,12 +52,16 @@ h1, h2 {
 	color: hsl(0, 0%, 13%);
 }
 
+time {
+	font-weight: 400;
+	color: hsl(0, 0%, 67%);
+}
+
 ul > li { padding: 3px 4px; }
 
 .post-list  { }
 .post-row   { padding-bottom: 25px; }
-.post-title { padding-bottom: 6px; }
-.post-date  { padding-bottom: 6px; color: hsl(0, 0%, 67%); }
+.post-title { }
 .post-desc  { color: hsl(0, 0%, 29%); }
 
 blockquote {

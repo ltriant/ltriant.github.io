@@ -11,9 +11,9 @@ layout: default
 			<div class="post-title">
 				<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 			</div>
-			<div class="post-date">
+			<time>
 				{{ post.date | date: "%-d %B %Y" }}
-			</div>
+			</time>
 			<div class="post-desc">
 				{{ post.description | escape }}
 			</div>
