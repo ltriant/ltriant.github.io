@@ -287,6 +287,6 @@ CHI also offers more fine-grained control, for when it’s time to get more comp
 
 ## Resources
 
-* [https://github.com/ltriant/md5-as-a-service](https://github.com/ltriant/md5-as-a-service) - MD5-as-a-Service example code and Docker files
+* [MD5 as a Service](https://gist.github.com/ltriant/0f3652acfc5ff0916a02060bd3d6425f) - example code and Docker files
 
 * [https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/](https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/)
