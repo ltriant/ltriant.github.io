@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "NES Emulator, Part 1: I have no idea what I'm doing"
-date:   2018-03-09 00:00:00 +1100
+date:   2018-03-09 00:00:00
 description: "I decided to jump into the deep end of emulator development by writing a NES emulator"
 ---
 For a very long time I’ve wanted to have a go at writing an emulator, and for one reason or another I never did it, but a few weeks ago I decided to pull the trigger and start writing a NES emulator. And I’ve chosen to write it in Rust, as I have a goal this year to achieve a moderate-to-high level of competency in the language.

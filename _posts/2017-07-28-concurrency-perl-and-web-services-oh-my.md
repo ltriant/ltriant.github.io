@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Concurrency, Perl and Web Services, Oh My!"
-date:   2017-07-28 00:00:00 +1100
+date:   2017-07-28 00:00:00
 description: "Building concurrent web services in Perl"
 ---
 The majority of the systems I develop - both in my spare time and at work - are heavily IO-based; connecting various web services, databases and files on disk together in some fashion. In those particular systems, I’d be stupid not to promote a concurrency-based solution.

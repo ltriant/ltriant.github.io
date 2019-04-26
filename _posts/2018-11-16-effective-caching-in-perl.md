@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Effective Caching in Perl"
-date:   2018-11-16 00:00:00 +1100
+date:   2018-11-16 00:00:00
 description: "Implementing a caching layer in a Perl application using some of CPAN's rock-solid modules"
 ---
 Caching strategies, cache invalidation, and everything else caching related is hard to get right, especially as systems become more and more liberal in the data that is cached, and more variable in the retention rules.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "NES Emulator, Part 2: I sort of know what I’m doing"
-date:   2018-06-29 00:00:00 +1100
+date:   2018-06-29 00:00:00
 description: "Finishing the CPU, starting the PPU, and reflecting on choosing Rust"
 ---
 In my first post about my journey to the center of the NES, I was at the point where I was still working on the CPU; implementing new addressing modes and instructions as I made my way through the nestest ROM. Well, I finally finished the CPU, including a handful of the illegal opcodes. The last of the illegal opcodes just need some placeholders, because, as I understand it, very few games use them.

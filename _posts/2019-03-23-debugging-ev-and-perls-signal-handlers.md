@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Debugging EV and Perl’s Signal Handlers"
-date:   2019-03-23 00:00:00 +1100
+date:   2019-03-23 00:00:00
 description: "Diving into EV's internals to debug a signal handling problem"
 ---
 A little while ago, I ran into a weird problem with a small Perl system that I had been developing. What followed was one of the more interesting debugging experiences of my career so far, involving digging into event loops, and how Perl and Linux handle signals.
