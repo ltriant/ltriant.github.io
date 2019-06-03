@@ -4,15 +4,14 @@ title: "Luke Triantafyllidis"
 ---
 Programmer from Melbourne, Australia
 
-Stuff I find interesting at the moment (May 2019):
+Stuff I find interesting at the moment (June 2019):
 
-* Clojure (best practices, async, design, etc)
 * [Zig](https://ziglang.org/)
+* [PunyForth](https://github.com/zeroflag/punyforth)
 
 ## .plan
 
 * accurate PPU cycle timing for [nes](https://github.com/ltriant/nes)
-* write a small test app with the Rust [sdl2 crate](https://crates.io/crates/sdl2)
 
 ## .projects
 
