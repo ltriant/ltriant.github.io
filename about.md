@@ -4,14 +4,14 @@ title: "Luke Triantafyllidis"
 ---
 Programmer from Melbourne, Australia
 
-Stuff I find interesting at the moment (June 2019):
+Interests include:
 
-* [Zig](https://ziglang.org/)
-* [PunyForth](https://github.com/zeroflag/punyforth)
-
-## .plan
-
-* accurate PPU cycle timing for [nes](https://github.com/ltriant/nes)
+* Linux
+* Systems programming
+* Distributed systems
+* Clojure, Rust, C, and Perl
+* Anything related to retro gaming (games, consoles, emulators, merchandise, etc)
+* Old programming languages (Forth) and also newer ones (Zig and Nim)
 
 ## .projects
 
