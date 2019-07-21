@@ -35,8 +35,9 @@ time {
 
 ul > li { padding: 3px 4px; }
 
-.post-list  { }
-.post-row   { padding-bottom: 25px; }
+.post-list  { border-spacing: 10px; }
+.post-row   { }
+.post-date  { text-align: right; }
 .post-title { }
 .post-desc  { color: hsl(0, 0%, 29%); }
 
