@@ -8,13 +8,14 @@ layout: default
 
 	<tr class="post-row">
 		<td class="post-date">
-			<time>{{ post.date | date: "%-d %B %Y" }}</time>
+			<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+				{{ post.date | date: "%-d %B %Y" }}
+			</time>
 		</td>
 
 		<td class="post-title">
 			<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 		</td>
-
 	</tr>
 
 	{%- endfor -%}
