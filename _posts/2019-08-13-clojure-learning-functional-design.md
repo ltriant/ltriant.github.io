@@ -48,9 +48,9 @@ In its most basic form, and taken from the [official documentation](https://cloj
 
 ```java
 Pokemon helioptile = new Pokemon();
-heliolisk.setName("Helioptile");
-heliolisk.setPrimaryType("Electric");
-heliolisk.setSecondaryType("Normal");
+helioptile.setName("Helioptile");
+helioptile.setPrimaryType("Electric");
+helioptile.setSecondaryType("Normal");
 ```
 
 The `doto` macro allows for a simple translation:
