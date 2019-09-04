@@ -15,7 +15,7 @@ Interests include:
 
 ## .projects
 
-* [nes](https://github.com/ltriant/nes), basic NES emulator (in progress)
+* [nes](https://github.com/ltriant/nes), simple NES emulator
 * [2048](https://github.com/ltriant/2048), command-line version of the 2048 game
 * [tree](https://github.com/ltriant/tree), clone of the tree command
 * [Games::Ascii](https://github.com/ltriant/Games-Ascii), small game engine for ASCII-based games (forever in progress)
