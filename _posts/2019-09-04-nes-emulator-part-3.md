@@ -121,11 +121,11 @@ Despite these issues, there were plenty of positive experiences, especially with
 
 ## The End?
 
-At the moment, I've reached my initial goals, which were to play Donkey Kong and Super Mario Bros without any errors (so far), but eventually I would like to add support for more mappers, with the next goal games being The Legend of Zelda and Ninja Gaiden (or Shadow Warriors for me, being from Australia). The ability to save games would be useful aswell.
+Initially, my goals were to play Donkey Kong and Super Mario Bros without any errors, which I achieved. And I've gone a little further than that, adding support for SxROM (mapper 1) games like The Legend of Zelda and Ninja Gaiden (or Shadow Warriors for me, being from Australia). So next up, I'd like to add the ability to save game state.
 
-I'm happy to put this project to the side for a while to focus on other projects, some of which, funnily enough, involve writing more emulators.
+After that, I'm happy to put this project to the side for a while to focus on other projects, some of which, funnily enough, involve writing more emulators.
 
-If I get inspired, I'll look at implementing the APU so that I can hear some funky 8-bit music, but that's pretty low on the priority list at the moment.
+If I get inspired, I'll look at implementing the APU so that I can hear some funky 8-bit music, but that's low on the priority list at the moment.
 
 For now, I'm happy to reap the benefits of my time and just play games on my own emulator for a while.
 
