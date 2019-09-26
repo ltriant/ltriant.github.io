@@ -10,12 +10,13 @@ Interests include:
 * Systems programming
 * Distributed systems
 * Clojure, Rust, C, and Perl
-* Anything related to retro gaming (games, consoles, emulators, merchandise, etc)
-* Old programming languages (Forth) and also newer ones (Zig and Nim)
+* Anything related to retro gaming (games, consoles, emulators, CPUs, merchandise, etc)
+* Old programming languages (Forth, and old Basic's)
+* New systems languages (Zig and Nim most recently)
 
 ## .projects
 
-* [nes](https://github.com/ltriant/nes), simple NES emulator
+* [nes](https://github.com/ltriant/nes), NES emulator
 * [2048](https://github.com/ltriant/2048), command-line version of the 2048 game
 * [tree](https://github.com/ltriant/tree), clone of the tree command
 * [Games::Ascii](https://github.com/ltriant/Games-Ascii), small game engine for ASCII-based games (forever in progress)
