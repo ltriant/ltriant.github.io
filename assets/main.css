@@ -3,20 +3,19 @@ body {
 
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-weight: 400;
-	font-size: 14pt;
+	font-size: 12pt;
 
 	color: #202020;
 }
 
 /*
- * Non-mobile styles go here...
+ * Add extra whitespace on desktop environments.
  */
 @media (min-width: 850px) {
 	body {
 		margin: 0 auto;
 		width: 50em;
 		padding: 4em 1em;
-		font-size: 12pt;
 	}
 }
 
@@ -44,11 +43,30 @@ time {
 
 ul > li { padding: 3px 4px; }
 
-.post-list  { border-spacing: 10px; }
+.post-list  {
+	width: 100%;
+	border-spacing: 10px;
+}
 .post-row   { }
-.post-date  { text-align: right; }
+.post-date  { }
 .post-title { }
 .post-desc  { color: hsl(0, 0%, 29%); }
+
+/*
+ * Align the post date and titles side-by-side on desktop environments.
+ */
+@media (min-width: 850px) {
+	.post-date  {
+		text-align: right;
+		float: left;
+		width: 29%;
+	}
+
+	.post-title {
+		float: right;
+		width: 69%;
+	}
+}
 
 blockquote {
 	border-left: 2px solid #3498db;

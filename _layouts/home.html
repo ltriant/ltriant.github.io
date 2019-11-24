@@ -7,14 +7,18 @@ layout: default
 	{%- for post in site.posts -%}
 
 	<tr class="post-row">
-		<td class="post-date">
+		<td>
+
+		<div class="post-date">
 			<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
 				{{ post.date | date: "%-d %B %Y" }}
 			</time>
-		</td>
+		</div>
 
-		<td class="post-title">
+		<div class="post-title">
 			<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+		</div>
+
 		</td>
 	</tr>
 
