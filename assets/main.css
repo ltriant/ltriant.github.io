@@ -1,14 +1,23 @@
 body {
-	margin: 0 auto;
-	max-width: 50em;
-
 	line-height: 1.5;
-	padding: 4em 1em;
 
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-weight: 400;
-	font-size: 12pt;
+	font-size: 14pt;
+
 	color: #202020;
+}
+
+/*
+ * Non-mobile styles go here...
+ */
+@media (min-width: 850px) {
+	body {
+		margin: 0 auto;
+		width: 50em;
+		padding: 4em 1em;
+		font-size: 12pt;
+	}
 }
 
 #content { padding-bottom: 10px; }
