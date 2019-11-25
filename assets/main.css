@@ -79,8 +79,16 @@ a:hover   { color: #faa61a; text-decoration: none; }
 
 img.post-image {
 	display: block;
+	height: auto;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media (min-width: 850px) {
+	img.post-image {
+		width: auto;
+	}
 }
 
 code, pre { background: hsl(0, 0%, 97%); }

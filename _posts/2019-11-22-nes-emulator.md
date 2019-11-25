@@ -80,7 +80,7 @@ Graphics are based on tiles that are 8x8 or 8x16 pixels in size. The raw tile da
 
 As an example, here's the first level of Donkey Kong, with the pattern tables on the right, and tile borders laid on top of the rendered output.
 
-![Donkey Kong Pattern Tables](/assets/donkey-kong-chr.png){:height="500px" .post-image}
+![Donkey Kong Pattern Tables](/assets/donkey-kong-chr.png){:.post-image}
 
 With a bit of squinting, we can see how some of the tiles on the right make up what's been rendered on the left.
 

@@ -33,13 +33,13 @@ Perhaps it's just a symptom of getting older, but after years of using dark back
 
 I ended up with this (work in progress) colorscheme:
 
-![Slightly easier on the eyes](/assets/vim-colorscheme-clojure.png){:height="300px" .post-image}
+![Slightly easier on the eyes](/assets/vim-colorscheme-clojure.png){:.post-image}
 
 I'm debating whether or not to change the orange to something else, but of the alternative colors that I've tried, I still like the orange.
 
 I specifically targetted Clojure with the colorscheme, but it doesn't look too bad with other languages either.
 
-![I like the type highlighting](/assets/vim-colorscheme-c.png){:height="500px" .post-image}
+![I like the type highlighting](/assets/vim-colorscheme-c.png){:.post-image}
 
 ---
 
