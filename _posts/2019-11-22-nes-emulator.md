@@ -58,11 +58,9 @@ A bit of rearrangement proves that SBC is _almost_ the same as ADC:
 
     ADC = A + V + C
 	SBC = A - V - (1 - C)
-	SBC = A + (-1 * (V - (1 - C)))
-	SBC = A + (-V + (1 - C))
-	SBC = A + -V + 1 + C
+	SBC = A - V - 1 + C
 
-The difference is that instead of adding `V`, the value that we're "adding" is `-V + 1`. This is the two's complement of V, but the `+ 1` is taken care of because of the fact that ADC and SBC do the opposite thing with the carry flag. So SBC can be implemented by reusing ADC and supplying the one's complement - the inversion of all bits - of the value to subtract:
+The difference is that instead of adding `V`, the value that we're "adding" is `-V - 1`. This is the two's complement of V, but the `- 1` is taken care of because of the fact that ADC and SBC do the opposite thing with the carry flag. So SBC can be implemented by reusing ADC and supplying the one's complement - the inversion of all bits - of the value to subtract:
 
 ```rust
 fn sbc(&mut self, val: u8) {
