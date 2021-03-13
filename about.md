@@ -8,7 +8,7 @@ Interests include:
 
 * Distributed systems
 * Systems programming
-* Clojure, ClojureScript, Rust, C, and Go
+* Rust, Clojure, C, Go, and TypeScript
 * Retro gaming and computing (games, consoles, cartridges, emulators, CPUs, and various hardware chips)
 
 ## .emulators
