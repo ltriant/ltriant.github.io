@@ -199,6 +199,6 @@ The experience of writing a NES emulator has been extremely fun and rewarding, t
 2. NES Graphics [part 1](http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/), [part 2](http://www.dustmop.io/blog/2015/06/08/nes-graphics-part-2/), and [part 3](http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/) by dustmop
 3. [NES Rendering Overview](https://austinmorlan.com/posts/nes_rendering_overview/) by Austin Morlan
 4. [ROMs and Mappers: Why NES Games Can Be So Different On The Same Hardware](https://abad1dea.tumblr.com/post/187429390285/roms-and-mappers-why-nes-games-can-be-so) by 0xabad1dea
-5. [Cartridge Printed Circuit Boards](https://byuu.net/cartridges/boards) by byuu
-6. [Audio: Dynamic Rate Control](https://byuu.net/audio/dynamic-rate-control) by byuu
+5. [Cartridge Printed Circuit Boards](https://near.sh/articles/cartridges/boards) by Near
+6. [Audio: Dynamic Rate Control](https://near.sh/articles/audio/dynamic-rate-control) by Near
 7. [EmuDev Discord Server](https://www.reddit.com/r/EmuDev/comments/8xp8h0/remudev_now_has_a_discord/)
