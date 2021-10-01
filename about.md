@@ -17,6 +17,7 @@ Interests include:
 * [atari2600](https://github.com/ltriant/atari2600), Atari 2600 emulator (in progress)
 * [md](https://github.com/ltriant/md), Sega Mega Drive emulator (very early stages, but in progress)
 * [chip8](https://github.com/ltriant/chip8), CHIP-8 emulator
+* [chip8z](https://github.com/ltriant/chip8z), the same CHIP-8 emulator, ported to Zig
 
 ## .projects
 
