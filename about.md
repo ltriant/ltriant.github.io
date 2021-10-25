@@ -17,13 +17,12 @@ Interests include:
 * [atari2600](https://github.com/ltriant/atari2600), Atari 2600 emulator (in progress)
 * [md](https://github.com/ltriant/md), Sega Mega Drive emulator (very early stages, but in progress)
 * [chip8](https://github.com/ltriant/chip8), CHIP-8 emulator
-* [chip8z](https://github.com/ltriant/chip8z), the same CHIP-8 emulator, ported to Zig
+* [chip8z](https://github.com/ltriant/chip8z), the same CHIP-8 emulator as above, ported to Zig
 
 ## .projects
 
 * [sidegate](https://github.com/ltriant/sidegate), file sharing server with a super simple web interface
 * [2048](https://github.com/ltriant/2048), curses-based version of the 2048 game
-* [tree](https://github.com/ltriant/tree), clone of the tree command, which I use surprisingly often
-* [tree-nim](https://github.com/ltriant/tree-nim), a port of the above tree command project, which is now my main tree command utility
+* [tree](https://github.com/ltriant/tree), a clone of the tree command, which became my main tree command utility
 * [Sys::Sendfile::OSX](https://metacpan.org/pod/Sys::Sendfile::OSX), Perl module to use [sendfile()](https://jvns.ca/blog/2016/01/23/sendfile-a-new-to-me-system-call/) on macOS
 * [Games::Ascii](https://github.com/ltriant/Games-Ascii), small game engine in Perl for ASCII-based games with curses (unfinished, forever in progress)
