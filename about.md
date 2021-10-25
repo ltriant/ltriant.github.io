@@ -8,7 +8,7 @@ Interests include:
 
 * Distributed systems
 * Systems programming
-* Rust, Clojure, Zig, and TypeScript
+* Rust, Clojure, and Nim
 * Retro gaming and computing (games, consoles, cartridges, emulators, CPUs, and various hardware chips)
 
 ## .emulators
@@ -24,5 +24,6 @@ Interests include:
 * [sidegate](https://github.com/ltriant/sidegate), file sharing server with a super simple web interface
 * [2048](https://github.com/ltriant/2048), curses-based version of the 2048 game
 * [tree](https://github.com/ltriant/tree), clone of the tree command, which I use surprisingly often
+* [tree-nim](https://github.com/ltriant/tree-nim), a port of the above tree command project, which is now my main tree command utility
 * [Sys::Sendfile::OSX](https://metacpan.org/pod/Sys::Sendfile::OSX), Perl module to use [sendfile()](https://jvns.ca/blog/2016/01/23/sendfile-a-new-to-me-system-call/) on macOS
 * [Games::Ascii](https://github.com/ltriant/Games-Ascii), small game engine in Perl for ASCII-based games with curses (unfinished, forever in progress)
