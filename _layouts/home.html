@@ -3,24 +3,16 @@ layout: default
 ---
 {{ content }}
 
-<table class="post-list">
+<h2>.blog</h2>
+
+<ul class="post-list">
 	{%- for post in site.posts -%}
 
-	<tr class="post-row">
-		<td>
+	<li class="post-row">
 
-		<div class="post-date">
-			<time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-				{{ post.date | date: "%-d %B %Y" }}
-			</time>
-		</div>
+		<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%-d %B %Y" }}</time>
 
-		<div class="post-title">
-			<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-		</div>
-
-		</td>
-	</tr>
+	</li>
 
 	{%- endfor -%}
-</table>
+</ul>

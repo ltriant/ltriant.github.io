@@ -38,6 +38,7 @@ h1, h2 {
 
 time {
 	font-weight: 400;
+	font-size: 8pt;
 	color: hsl(0, 0%, 67%);
 }
 
@@ -49,24 +50,7 @@ ul > li { padding: 3px 4px; }
 }
 .post-row   { }
 .post-date  { }
-.post-title { }
 .post-desc  { color: hsl(0, 0%, 29%); }
-
-/*
- * Align the post date and titles side-by-side on desktop environments.
- */
-@media (min-width: 850px) {
-	.post-date  {
-		text-align: right;
-		float: left;
-		width: 29%;
-	}
-
-	.post-title {
-		float: right;
-		width: 69%;
-	}
-}
 
 blockquote {
 	border-left: 2px solid #3498db;
