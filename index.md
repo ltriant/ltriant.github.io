@@ -4,14 +4,9 @@ title: "Luke Triantafyllidis"
 ---
 # {{ site.title }}
 
-Programmer from Melbourne, Australia
+Programmer from Melbourne, Australia.
 
-Interests include:
-
-* Distributed systems
-* Systems programming
-* Rust, Clojure, and Nim
-* Retro gaming and computing (games, consoles, cartridges, emulators, CPUs, and various hardware chips)
+Interested in distributed systems, systems programming, and retro gaming and computing.
 
 ## .projects
 
