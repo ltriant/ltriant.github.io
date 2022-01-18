@@ -36,9 +36,10 @@ h1, h2 {
 	color: hsl(0, 0%, 13%);
 }
 
+time.main-post-date { font-size: 12pt; }
+time.post-list-date { font-size: 8pt; }
 time {
 	font-weight: 400;
-	font-size: 8pt;
 	color: hsl(0, 0%, 67%);
 }
 
@@ -81,7 +82,7 @@ pre {
 	border-left: 2px solid #f99157;
 }
 code {
-	padding: 2px 4px;
+	font-size: 10pt;
 	/*vertical-align: text-bottom;*/
 }
 

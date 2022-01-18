@@ -10,7 +10,7 @@ layout: default
 
 	<li class="post-row">
 
-		<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%-d %B %Y" }}</time>
+		<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time class="post-list-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%-d %B %Y" }}</time>
 
 	</li>
 
