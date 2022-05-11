@@ -6,8 +6,6 @@ title: "Luke Triantafyllidis"
 
 Programmer from Melbourne, Australia.
 
-Interested in distributed systems, systems programming, and retro gaming and computing.
-
 ## .projects
 
 * [nes](https://github.com/ltriant/nes), NES emulator
