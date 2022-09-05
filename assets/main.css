@@ -1,7 +1,7 @@
 body {
-	line-height: 1.5;
+	line-height: 1.4;
 
-	font-family: "Helvetica", "Arial", sans-serif;
+	font-family: sans-serif;
 	font-weight: 400;
 	font-size: 12pt;
 
@@ -22,9 +22,9 @@ body {
 #content { padding-bottom: 10px; }
 
 #page-footer {
-	border-left: 2px solid #faa61a;
-	padding: 8px 1em;
-	background: hsl(0, 0%, 97%);
+	border-top: 1px solid #202020;
+	padding: 0.2em 0em;
+	/*background: hsl(0, 0%, 97%);*/
 }
 
 h1 { font-size: 14pt; }
@@ -37,19 +37,17 @@ h1, h2 {
 }
 
 time.main-post-date { font-size: 12pt; }
-time.post-list-date { font-size: 8pt; }
+time.post-list-date { font-size: 12pt; }
 time {
 	font-weight: 400;
 	color: hsl(0, 0%, 67%);
 }
 
-ul > li { padding: 3px 4px; }
-
-.post-list  {
-	width: 100%;
-	border-spacing: 10px;
+.post-list  { }
+.post-row   {
+	color: hsl(0, 0%, 67%);
+	padding-left: 0.25em;
 }
-.post-row   { }
 .post-date  { }
 .post-desc  { color: hsl(0, 0%, 29%); }
 
@@ -60,7 +58,7 @@ blockquote {
 
 a:link    { color: #f99157; }
 a:visited { color: #f99157; }
-a:hover   { color: #faa61a; text-decoration: none; }
+a:hover   { color: #f99157; text-decoration: none; }
 
 img.post-image {
 	display: block;
