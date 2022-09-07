@@ -16,7 +16,7 @@
 title: Luke Triantafyllidis
 email: ltriant@cpan.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Programmer from Melbourne, Australia into systems programming, distributed systems, debugging, and programming languages
+  Programmer from Melbourne, Australia
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
