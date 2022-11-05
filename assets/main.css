@@ -44,10 +44,7 @@ time {
 }
 
 .post-list  { }
-.post-row   {
-	color: hsl(0, 0%, 67%);
-	padding-left: 0.25em;
-}
+.post-row   { color: hsl(0, 0%, 67%); }
 .post-date  { }
 .post-desc  { color: hsl(0, 0%, 29%); }
 
