@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background-color: hsl(35, 80%, 5%);
+		--background-color: hsl(15, 80%, 5%);
 		--code-background-color: hsl(0, 98%, 2%);
 		--foreground-color: hsl(0, 0%, 97%);
 		--header-color: hsl(0, 0%, 87%);
