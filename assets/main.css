@@ -2,7 +2,7 @@
 	:root {
 		--background-color: hsl(0, 0%, 99%);
 		--code-background-color: hsl(0, 0%, 97%);
-		--foreground-color: hsl(0, 98%, 2%)
+		--foreground-color: hsl(0, 98%, 2%);
 		--header-color: hsl(0, 0%, 13%);
 		--time-color: hsl(0, 0%, 67%);
 	}
