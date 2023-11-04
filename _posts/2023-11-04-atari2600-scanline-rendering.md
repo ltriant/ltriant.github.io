@@ -17,7 +17,7 @@ The counters are clocked at 1/4 the rate of the Television Interface Adaptor (TI
 
 There is a counter specifically for horizontal syncing (HSYNC), and the playfield (background) uses the HSYNC counter to render, however I used a specific counter for the playfield. The player, missile, and ball sprites all have their own counters. The sprites only render at certain points in the counter... they're not rendering for all 40 clocks. Individual counters can be reset at different points of the scanline — via the RESxx registers of the TIA — in order to get different sprites to render at different horizontal positions on the screen.
 
-Another important counter is the graphics scan counter. This counter is also present in the sprites. It's described as a 3-bit binary counter, so it has counts values from 0 to 7, and it is used to determine which bit of the 8-bit graphics register of the sprite to draw. It clocks along at a rate which is determined by the NUSIZx registers.
+Another important counter is the graphics scan counter. This counter is also present in the sprites. It's described as a 3-bit binary counter, so it counts values from 0 to 7, and it is used to determine which bit of the 8-bit graphics register of the sprite to draw. It clocks along at a rate which is determined by the NUSIZx registers.
 
 After fumbling my way through a naive initial implementation, based on whatever wisdom I had accumulated from my NES emulator, I ended up with this:
 
@@ -29,15 +29,15 @@ At this point, I spent _a lot_ of time re-implementing the counters as simply as
 
 So I decided to move on, and _see what happens_.
 
-I thought about implementing the RIOT chip — named for the **R**AM, **I/O**, and **T**imers that it encapsulates — which contains timers that I thought might affect how the sprites being rendered. So with an initial cut of the RIOT chip, I got to this point:
+I thought about implementing the RIOT chip — named for the **R**AM, **I/O**, and **T**imers that it encapsulates — which contains timers that I thought might affect how the sprites are being rendered. So with an initial cut of the RIOT chip, I got to this point:
 
 ![Pitfall with movement!](/assets/pitfall-2.gif){:.post-image}
 
 It's a delightfully chaotic mess.
 
-Pitfall Harry is running to the left on his own — I hadn't hooked up and keyboard events to the controller yet, so this was strange — and the entire picture seems to be pushed down by a few pixels cutting off the bottom of the frame, but I guess things are kinda working?
+Pitfall Harry is running to the left on his own — I hadn't hooked up any keyboard events to the controller yet, so this was strange — and the entire picture seems to be pushed down by a few pixels resulting in the bottom of the frame being cut off, but I guess things are kinda working?
 
-I've initialised all of the movement registers in SWCHA to zero, and according to [the docs](https://problemkaputt.de/2k6specs.htm#controllersjoysticks), a zero means the button is pressed, so the game thinks every direction on the joystick is being pressed at once, and I guess the game code checks the left direction first.
+It turns out I've initialised all of the movement registers in SWCHA to zero, and according to [the docs](https://problemkaputt.de/2k6specs.htm#controllersjoysticks), a zero means the button is pressed, so the game thinks every direction on the joystick is being pressed at once, and I guess the game code checks the left direction first.
 
 With that fixed, and with the input registers also implemented — which are implemented in the TIA and _not_ the RIOT chip for some reason — Pitfall Harry has stopped running and can jump!
 
@@ -47,7 +47,7 @@ He looks so happy!
 
 At this point, I'm pretty happy with the graphics scan counter, since the correct bits of the player sprite are being drawn even when doing something like jumping.
 
-Depending on the values in the NUSIZx registers, each bit of the graphics scan counter may be outputted multiple times before advancing to the next bit position. This means that the period of the graphics scan counter is extended by a factor determined by NUSIZx, or more simply put — we count from 0-7 at a slower rate.
+Depending on the values in the NUSIZx registers, each bit of the graphics scan counter may be outputted multiple times before advancing to the next bit position. This results in a sprite being stretched wider. This means that the period of the graphics scan counter is extended by a factor determined by NUSIZx, or more simply put — we count from 0-7 at a slower rate.
 
 With the implementation of the NUSIZx registers for the player sprites, and with a bug fixed in the frame timing, I end up here:
 
