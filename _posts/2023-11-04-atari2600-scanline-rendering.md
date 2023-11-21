@@ -122,8 +122,8 @@ Unrelated to the graphics, I also fixed the implementation of binary-coded decim
 I looked around at what code messes with the scanline counting, and found the RSYNC register, which is meant to reset the HSYNC counter when any value is written to that register. The code looks simple enough:
 
 ```rust
-            // RSYNC   <strobe>  reset horizontal sync counter
-            0x0003 => { self.ctr.reset() },
+    // RSYNC   <strobe>  reset horizontal sync counter
+    0x0003 => { self.ctr.reset() },
 ```
 
 TIA_HW_Notes.txt gives some more context:
